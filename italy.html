@@ -44,5 +44,19 @@
     <footer>
         <p>&copy; 2024 Discover Italy. All rights reserved.</p>
     </footer>
+    <script>
+        // Function to handle button clicks
+        function showAlert(destination) {
+            alert(`More information about ${destination}`);
+        }
+    
+        // Add event listeners to each button
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', () => {
+                const destination = button.parentElement.querySelector('h2').textContent;
+                showAlert(destination);
+            });
+        });
+    </script>
 </body>
 </html>
